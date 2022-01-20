@@ -1,12 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Button, { ButtonType, ButtonSize } from "./components/Button/button";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <Button
+          btnType={ButtonType.Primary}
+          onClick={(e) => {
+            alert(123);
+          }}
+        >
+          12234
+        </Button>
+
+        <Button btnType={ButtonType.Primary}>12234</Button>
+        <Button btnType={ButtonType.Link} href="1">
+          12234
+        </Button>
+        <Button btnType={ButtonType.Primary} disabled>
+          12234
+        </Button>
+        <Button btnType={ButtonType.Danger}>12234</Button>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -18,6 +33,7 @@ function App() {
         >
           Learn React
         </a>
+        <code>const a = 'a'</code>
       </header>
     </div>
   );
